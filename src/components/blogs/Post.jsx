@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 
 
 function BlogPage() {
   const {id} = useParams();
+  const navigate = useNavigate();
   // console.log(useParams());
 
   const [content, setContent] = useState(null);
+
+  const goBack = () => navigate(-1);
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
@@ -15,13 +18,14 @@ function BlogPage() {
   }, [id]);
 
   return (
-    <React.Fragment>
+    <div>
       {content
         ? <h2>{content.title}</h2>
         : <h2>...Загрузка</h2>
       }
+      <button onClick={goBack}>Go Back</button>
       <Link to={`/blog/edit/${id}`}>Edit this post</Link>
-    </React.Fragment>
+    </div>
   )
 }
 

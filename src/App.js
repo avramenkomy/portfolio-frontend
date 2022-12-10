@@ -11,22 +11,31 @@ import CreatePost from './components/blogs/CreatePost';
 import EditPost from './components/blogs/EditPost';
 import NotFound from './components/NotFound';
 import Layout from './components/layout/Layout';
+import Login from './components/auth/Login';
+
+import RequireAuth from './components/hoc/RequireAuth';
+import AuthProvider from './components/hoc/AuthProvider';
 
 function App() {
   return (
-    <React.Fragment>     
+    <AuthProvider>     
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="news" element={<News />} />
           <Route path="blog" element={<Blog />} />
-          <Route path="blog/create" element={<CreatePost />} />
+          <Route path="blog/create" element={
+            <RequireAuth>
+              <CreatePost />
+            </RequireAuth>
+          } />
           <Route path="blog/:id" element={<Post />} />
           <Route path="blog/edit/:id" element={<EditPost />} />
+          <Route path="login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-    </React.Fragment>    
+    </AuthProvider>    
   );
 }
 
