@@ -1,18 +1,18 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 import './Layout.css';
 
-const setActive = ({isActive}) => ({ color: isActive ? 'var(--color-active' : 'white'})
+import CustomLink from '../../elements/CustomLink';
 
 
 function Layout() {
   return (
     <React.Fragment>
       <header>
-        <NavLink to="/" style={setActive}>Home</NavLink>
-        <NavLink to="/news" style={setActive}>News</NavLink>
-        <NavLink to="/blog" style={setActive}>Blog</NavLink>
+        <CustomLink to="/">Home</CustomLink>
+        <CustomLink to="/news">News</CustomLink>
+        <CustomLink to="/blogs">Blogs</CustomLink>
       </header>
 
       <main className="container">
