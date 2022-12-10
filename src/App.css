@@ -6,17 +6,3 @@ header {
   justify-content: center;
   align-items: center;
 }
-
-a:link {
-  margin: 0 5px 5px 0;
-  text-decoration: none;
-  color: antiquewhite;
-}
-
-a:visited {
-  color: antiquewhite;
-}
-
-a:hover {
-  color: #009900;
-}

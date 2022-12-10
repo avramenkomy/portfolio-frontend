@@ -1,15 +1,16 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 import './Layout.css';
+
 
 function Layout() {
   return (
     <React.Fragment>
       <header>
-        <Link to="/">Home</Link>
-        <Link to="/news">News</Link>
-        <Link to="/blog">Blog</Link>
+        <NavLink to="/" className={({isActive}) => isActive ? 'active-link' : ''}>Home</NavLink>
+        <NavLink to="/news" className={({isActive}) => isActive ? 'active-link' : ''}>News</NavLink>
+        <NavLink to="/blog" className={({isActive}) => isActive ? 'active-link' : ''}>Blog</NavLink>
       </header>
 
       <main className="container">
