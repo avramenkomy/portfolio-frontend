@@ -3,16 +3,16 @@ import { NavLink, Outlet } from 'react-router-dom';
 
 import './Layout.css';
 
-const setActive = ({isActive}) => isActive ? 'active-link' : '';
+const setActive = ({isActive}) => ({ color: isActive ? 'var(--color-active' : 'white'})
 
 
 function Layout() {
   return (
     <React.Fragment>
       <header>
-        <NavLink to="/" className={setActive}>Home</NavLink>
-        <NavLink to="/news" className={setActive}>News</NavLink>
-        <NavLink to="/blog" className={setActive}>Blog</NavLink>
+        <NavLink to="/" style={setActive}>Home</NavLink>
+        <NavLink to="/news" style={setActive}>News</NavLink>
+        <NavLink to="/blog" style={setActive}>Blog</NavLink>
       </header>
 
       <main className="container">
