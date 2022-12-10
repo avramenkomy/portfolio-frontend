@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 function NotFound() {
   return (
-    <div>
+    <h2>
       This NotFound component!!!Resirect to <Link to="/">Home</Link>
-    </div>
+    </h2>
   )
 }
 
