@@ -12,7 +12,7 @@ function Layout() {
       <header>
         <CustomLink to="/">Home</CustomLink>
         <CustomLink to="/news">News</CustomLink>
-        <CustomLink to="/blogs">Blogs</CustomLink>
+        <CustomLink to="/blog">Blog</CustomLink>
       </header>
 
       <main className="container">
