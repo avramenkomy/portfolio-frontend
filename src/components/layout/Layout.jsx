@@ -3,14 +3,16 @@ import { NavLink, Outlet } from 'react-router-dom';
 
 import './Layout.css';
 
+const setActive = ({isActive}) => isActive ? 'active-link' : '';
+
 
 function Layout() {
   return (
     <React.Fragment>
       <header>
-        <NavLink to="/" className={({isActive}) => isActive ? 'active-link' : ''}>Home</NavLink>
-        <NavLink to="/news" className={({isActive}) => isActive ? 'active-link' : ''}>News</NavLink>
-        <NavLink to="/blog" className={({isActive}) => isActive ? 'active-link' : ''}>Blog</NavLink>
+        <NavLink to="/" className={setActive}>Home</NavLink>
+        <NavLink to="/news" className={setActive}>News</NavLink>
+        <NavLink to="/blog" className={setActive}>Blog</NavLink>
       </header>
 
       <main className="container">
