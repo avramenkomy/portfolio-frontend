@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import './App.css';
 
@@ -7,23 +7,20 @@ import Home from './components/Home';
 import News from './components/News';
 import Blog from './components/Blog';
 import NotFound from './components/NotFound';
+import Layout from './components/layout/Layout';
 
 function App() {
   return (
-    <React.Fragment>
-      <header>
-        <Link to="/">Home</Link>
-        <Link to="/news">News</Link>
-        <Link to="/blog">Blog</Link>
-      </header>
+    <React.Fragment>     
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="news" element={<News />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
-    </React.Fragment>
-    
+    </React.Fragment>    
   );
 }
 
