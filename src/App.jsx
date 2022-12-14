@@ -15,6 +15,7 @@ import Login from './components/auth/Login';
 
 import RequireAuth from './components/hoc/RequireAuth';
 import AuthProvider from './components/hoc/AuthProvider';
+import About from './components/About';
 
 function App() {
   return (
@@ -31,6 +32,10 @@ function App() {
           } />
           <Route path="blog/:id" element={<Post />} />
           <Route path="blog/edit/:id" element={<EditPost />} />
+          <Route path="about" element={<About />}>
+            <Route path="contacts" element={<p>Our contacts</p>}/>
+            <Route path="team" element={<p>Our team</p>}/>
+          </Route>
           <Route path="login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Route>

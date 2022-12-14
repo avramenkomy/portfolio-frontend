@@ -21,6 +21,7 @@ function Layout() {
         <CustomLink to="/">Home</CustomLink>
         <CustomLink to="/news">News</CustomLink>
         <CustomLink to="/blog">Blog</CustomLink>
+        <CustomLink to="/about">About</CustomLink>
         {user && <button onClick={handleLogout}>Logout</button>}
       </header>
 
