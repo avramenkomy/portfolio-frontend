@@ -6,14 +6,11 @@ function CustomLink ({to, children, ...props}) {
     path: to,
     end: to.length === 1,
   });
-  // console.log('match_obj', {match});
 
   return (
     <Link
       to={to}
-      style={{
-        color: match ? 'var(--color-active)' : 'white',
-      }}
+      style={{ color: match ? 'var(--color-active)' : 'white' }}
       {...props}
     >
       {children}
