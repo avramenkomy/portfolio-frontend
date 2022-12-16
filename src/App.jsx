@@ -8,16 +8,6 @@ import {
   Contacts, Resume
 } from './components';
 
-// import Home from './components/Home';
-// import Blog from './components/blogs/Blog';
-// import Post from './components/blogs/Post';
-// import CreatePost from './components/blogs/CreatePost';
-// import EditPost from './components/blogs/EditPost';
-// import NotFound from './components/NotFound';
-// import Layout from './Layout';
-// import Login from './components/auth/Login';
-
-// import RequireAuth from './components/hoc/RequireAuth';
 import AuthProvider from './components/hoc/AuthProvider';
 
 function App() {
