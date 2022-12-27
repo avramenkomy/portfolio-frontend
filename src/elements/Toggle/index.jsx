@@ -3,16 +3,16 @@ import './index.css';
 
 const Toggle = ({ value, onChange }) => (
   
-  <div className = 'toggle-switch'>
+  <div className='toggle-switch'>
     <label htmlFor="toggler">
       <input
       id="toggler"
-      type = 'checkbox'
+      type='checkbox'
       onClick={onChange}
       checked={value}
       readOnly
       />
-      <span class = 'slider'></span>
+      <span className='slider'></span>
     </label>   
   </div>
   
