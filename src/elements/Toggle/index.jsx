@@ -3,7 +3,7 @@ import './index.css';
 
 const Toggle = ({ value, onChange }) => (
   
-  <div class = 'toggle-switch'>
+  <div className = 'toggle-switch'>
     <label htmlFor="toggler">
       <input
       id="toggler"
