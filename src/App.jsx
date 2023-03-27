@@ -4,9 +4,11 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
 import {
   NotFound, Home, About,
-  Skills, Projects, Blog,
+  Skills, Blog,
   Contacts, Resume
 } from './components';
+
+import Projects from './components/MiniProjects';
 
 import AuthProvider from './components/hoc/AuthProvider';
 

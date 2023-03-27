@@ -23,6 +23,7 @@ function Header () {
             <CustomLink to="/">Главная</CustomLink>
             <CustomLink to="/about-me">Обо мне</CustomLink>
             <CustomLink to="/skills">Навыки</CustomLink>
+            <CustomLink to="/projects">Проекты</CustomLink>
             <CustomLink to="/blog">Блог</CustomLink>
             <CustomLink to="/contact-me">Контакты</CustomLink>
             <CustomLink to="/resume">Резюме</CustomLink>
