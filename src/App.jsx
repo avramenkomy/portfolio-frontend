@@ -9,6 +9,7 @@ import {
 } from './components';
 
 import Projects from './components/MiniProjects';
+import TodosApp from './components/MiniProjects/Todos';
 
 import AuthProvider from './components/hoc/AuthProvider';
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="about-me" element={<About />} />
           <Route path="skills" element={<Skills />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="projects/todos" element={<TodosApp />} />
           <Route path="blog" element={<Blog />} />
           <Route path="contact-me" element={<Contacts />} />
           <Route path="resume" element={<Resume />} />
