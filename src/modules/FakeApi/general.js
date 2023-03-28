@@ -2,7 +2,7 @@
  * 
 */
 
-import { PROJECTS_LIST } from "../constants";
+import { PROJECTS_LIST } from '../constants';
 
 async function getProjectsList() {
   return {
