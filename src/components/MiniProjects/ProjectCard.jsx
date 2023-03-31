@@ -8,7 +8,7 @@ function ProjectCard ({ project_info }) {
   return (
     <Link to={`${project_info.url}`}>
       <div className="project__card">
-        <p>Project card</p>
+        <p>{project_info.title}</p>
       </div>
     </Link>
   )
