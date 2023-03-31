@@ -4,10 +4,11 @@ import './index.css';
 const Toggle = ({ value, onChange }) => (
   
   <div className='toggle-switch'>
-    <label htmlFor="toggler">
+    <label htmlFor="toggler" className="toggle__label">
       <input
         id="toggler"
-        type='checkbox'
+        type="checkbox"
+        className="toggle__input"
         onClick={onChange}
         checked={value}
         readOnly
