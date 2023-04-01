@@ -10,6 +10,7 @@ const useStyles = createUseStyles({
     margin: '20px auto',
     padding: 0,
     height: '1px',
+    maxWidth: '1000px',
     width: '90vw',
     border: 'none',
     backgroundColor: 'var(--primary)'
