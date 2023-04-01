@@ -9,8 +9,9 @@ const useStyles = createUseStyles({
   hr: {
     margin: '20px auto',
     padding: 0,
-    height: '0px',
+    height: '1px',
     width: '90vw',
+    border: 'none',
     backgroundColor: 'var(--primary)'
   },
 })
