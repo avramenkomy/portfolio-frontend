@@ -4,6 +4,9 @@ import { createUseStyles } from 'react-jss';
 const useStyles = createUseStyles({
   root: {
     margin: '10px auto',
+    width: '90vw',
+    maxWidth: '1000px',
+    minWidth: '300px',
     backgroundColor: 'none',
     textAlign: 'center',
     color: 'var(--primary)',
@@ -13,13 +16,22 @@ const useStyles = createUseStyles({
     marginBottom: '50px',
     display: 'flex',
     flexDirection: 'row',
-
+    '@media (max-width: 599px)': {
+      flexDirection: 'column',
+    }
   },
   lists: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '35%',
+    '@media (max-width: 600px)': {
+      width: '100%',
+      marginBottom: '20px',
+      justifyContent: 'space-between',
+    }
   },
   list: {
     display: 'flex',
@@ -32,7 +44,11 @@ const useStyles = createUseStyles({
     textTransform: 'uppercase',
     fontWeight: 'bolder',
     fontSize: '1.1rem',
-    color: 'var(--contrast-text)'
+    color: 'var(--contrast-text)',
+    '@media (max-width: 800px) and (min-width: 600px)': {
+      fontSize: '0.8rem',
+      fontWeight: '500',
+    }
   },
   list__item: {
     margin: '3px 0',
@@ -40,6 +56,10 @@ const useStyles = createUseStyles({
     color: 'var(--contrast-text)',
     fontWeight: '400',
     fontSize: '1rem',
+    '@media (max-width: 800px) and (min-width: 600px)': {
+      fontSize: '0.75rem',
+      fontWeight: '300',
+    }
   },
   form__feedback: {
     paddingLeft: '10px',
@@ -60,9 +80,12 @@ const useStyles = createUseStyles({
       padding: 0,
       paddingLeft: '10px',
     },
+    '@media (max-width: 600px)': {
+      width: '100%',
+    }
   },
   message: {
-    height: '50%',
+    height: '100px',
   },
   sender: {
     height: '30px',
@@ -72,7 +95,7 @@ const useStyles = createUseStyles({
   },
   btn__send: {
     padding: 0,
-    width: '20%',
+    width: '50%',
     height: '30px',
     fontSize: '12px',
     background: 'none',
@@ -95,15 +118,23 @@ const useStyles = createUseStyles({
     },
     '&:active': {
       transform: 'scale(0.98)',
+    },
+    '@media (max-width: 600px)': {
+      width: '50%',
     }
   },
   footers__down: {
     display: 'flex',
     flexDirection: 'row',
+    alignItems:'center',
     height: '35px',
     maxWidth: '1000px',
     width: '90vw',
     margin: '0 auto',
+    '@media (max-width: 450px)': {
+      flexDirection: 'column-reverse',
+      height: '70px',
+    }
   },
   copyright: {
     flexGrow: '1',
@@ -113,6 +144,9 @@ const useStyles = createUseStyles({
   social: {
     display: 'flex',
     flexDirection: 'row',
+    '@media (max-width: 450px)': {
+      marginBottom: '15px',
+    }
   },
   icon: {
     margin: '0 5px',
