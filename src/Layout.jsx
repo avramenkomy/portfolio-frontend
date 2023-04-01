@@ -1,7 +1,24 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import { createUseStyles } from 'react-jss';
 
 import Header from './components/Header';
+import FooterComponent from './components/Footer';
+
+const useStyles = createUseStyles({
+  hr: {
+    margin: '20px auto',
+    padding: 0,
+    height: '0px',
+    width: '90vw',
+    backgroundColor: 'var(--primary)'
+  },
+})
+
+const Hr = () => {
+  const classes = useStyles();
+  return <hr className={classes.hr}/>
+}
 
 
 function Layout() {
@@ -15,9 +32,9 @@ function Layout() {
         <Outlet />
       </main>
 
-      <footer className="container">
-        This is page's footer
-      </footer>
+      <Hr />
+
+      <FooterComponent />
     </React.Fragment>
   )
 }

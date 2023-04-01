@@ -122,8 +122,3 @@ nav > a {
   border: 1px solid var(--primary);
   border-radius: 5px;
 }
-
-footer {
-  color: var(--contrast-text);
-  text-align: center;
-}
