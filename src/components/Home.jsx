@@ -1,12 +1,9 @@
 import React from 'react';
-import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import { createUseStyles } from 'react-jss';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-
-import Button from '../elements/Button/button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import usersPhotoMock from '../utils/img/users_photo_mock.jpeg';
 
