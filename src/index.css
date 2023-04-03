@@ -9,15 +9,27 @@
   --secondary: #45a29e;
   --secondary2: #66fcf1;
   --contrast-text: #0b0c10;
+
+  --neumorphism_shadow: -4px -4px 4px white,
+                          4px 4px 4px rgba(0,0,0,.3);
+
+  --neumorphism_shadow_pressed: inset 4px 4px 4px rgba(0,0,0,.3),
+                                inset -4px -4px 4px white;
 }
 
 :root[data-theme="dark"] {
-  --background-color: #0b0c10;
+  --background-color: #15171f;
   --primary: #66fcf1;
   --primary2: #45a29e;
   --secondary: #c5c6c7;
   --secondary2: #727477;
   --contrast-text: #c5c6c7;
+
+  --neumorphism_shadow: -5px -5px 10px #000000,
+                          5px 5px 10px #242735;
+
+  --neumorphism_shadow_pressed: inset 5px 5px 10px #040506,
+                                inset -5px -5px 10px #12131a;
 }
 
 :root {
@@ -124,4 +136,48 @@ nav > a {
   color: var(--primary);
   border: 1px solid var(--primary);
   border-radius: 5px;
+}
+
+.neumorphism_button {
+  min-width: 120px;
+  background: none;
+  box-shadow: var(--neumorphism_shadow);
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-weight: 100;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+.neumorphism_button:hover {
+  cursor: pointer;
+}
+
+.neumorphism_button:active {
+  box-shadow: var(--neumorphism_shadow_pressed);
+}
+
+@media (max-width: 620px) {
+  .neumorphism_button {
+    letter-spacing: inherit;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .neumorphism_button {
+    letter-spacing: inherit;
+    font-size: 0.75rem;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .neumorphism_button {
+    letter-spacing: inherit;
+    font-size: 0.7rem;
+  }
 }
