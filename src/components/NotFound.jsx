@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function NotFound() {
   return (
     <h2>
-      This NotFound component!!!Resirect to <Link to="/">Home</Link>
+      This NotFound component!!!Redirect to <Link to="/">Home</Link>
     </h2>
   )
 }

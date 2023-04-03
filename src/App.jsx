@@ -1,46 +1,36 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import './App.css';
+import Layout from './Layout';
+import {
+  NotFound, Home, About,
+  Skills, Blog,
+  Contacts, Resume
+} from './components';
 
-import Home from './components/Home';
-import News from './components/News';
-import Blog from './components/blogs/Blog';
-import Post from './components/blogs/Post';
-import CreatePost from './components/blogs/CreatePost';
-import EditPost from './components/blogs/EditPost';
-import NotFound from './components/NotFound';
-import Layout from './components/layout/Layout';
-import Login from './components/auth/Login';
+import Projects from './components/MiniProjects';
+import TodosApp from './components/MiniProjects/Todos';
 
-import RequireAuth from './components/hoc/RequireAuth';
 import AuthProvider from './components/hoc/AuthProvider';
-import About from './components/About';
 
 function App() {
   return (
-    <AuthProvider>     
+    <AuthProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="news" element={<News />} />
+          <Route path="about-me" element={<About />} />
+          <Route path="skills" element={<Skills />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="projects/todos" element={<TodosApp />} />
           <Route path="blog" element={<Blog />} />
-          <Route path="blog/create" element={
-            <RequireAuth>
-              <CreatePost />
-            </RequireAuth>
-          } />
-          <Route path="blog/:id" element={<Post />} />
-          <Route path="blog/edit/:id" element={<EditPost />} />
-          <Route path="about" element={<About />}>
-            <Route path="contacts" element={<p>Our contacts</p>}/>
-            <Route path="team" element={<p>Our team</p>}/>
-          </Route>
-          <Route path="login" element={<Login />} />
+          <Route path="contact-me" element={<Contacts />} />
+          <Route path="resume" element={<Resume />} />
+
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-    </AuthProvider>    
+    </AuthProvider>
   );
 }
 
