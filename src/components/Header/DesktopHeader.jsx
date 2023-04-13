@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+// import propTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 
 import CustomLink from '../../elements/CustomLink';
@@ -31,9 +31,9 @@ const useStyles = createUseStyles({
   },
 });
 
-DesktopHeader.propTypes = {
+// DesktopHeader.propTypes = {
   
-};
+// };
 
 function DesktopHeader(props) {
   const classes = useStyles();
