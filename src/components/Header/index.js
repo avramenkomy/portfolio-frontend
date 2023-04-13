@@ -11,7 +11,6 @@ import { ThemeContext, themes } from '../hoc/ThemeProvider';
 
 import DesktopHeader from './DesktopHeader';
 import MobileHeader from './MobileHeader';
-// import CustomLink from '../../elements/CustomLink';
 import Toggle from '../../elements/Toggle';
 
 
