@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { createUseStyles } from 'react-jss';
 
-import Header from './components/Header';
+import HeaderComponent from './components/Header';
 import FooterComponent from './components/Footer';
 
 const useStyles = createUseStyles({
@@ -28,7 +28,7 @@ function Layout() {
   return (
     <React.Fragment>
 
-      <Header />
+      <HeaderComponent />
 
       <main className="container">
         <Outlet />
