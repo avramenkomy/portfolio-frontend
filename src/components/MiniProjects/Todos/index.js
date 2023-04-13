@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
 
 import TodoItem from './TodoItem';
+import Loader from '../../../elements/Loader';
 
 import './index.css';
 
@@ -79,7 +80,7 @@ function TodosApp() {
       <p>Todos App</p>
       <button onClick={goBack} className="go_back__btn">Go Back</button>
 
-      {loading && <p className="loader">...Loading</p>}
+      {loading && <Loader />}
 
       <div className="input__block">
         <input
