@@ -63,7 +63,6 @@ const useStyles = createUseStyles({
       fontSize: '1.75rem',
       fontStyle: 'italic',
       fontWeight: '300',
-      width: '50vw',
       color: 'var(--contrast-text)',
       '@media (max-width: 950px)': {
         fontSize: '1.75rem',
