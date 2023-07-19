@@ -26,9 +26,8 @@ function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="contact-me" element={<Contacts />} />
           <Route path="resume" element={<Resume />} />
-
-          <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </AuthProvider>
   );
