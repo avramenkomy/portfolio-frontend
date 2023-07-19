@@ -1,5 +1,4 @@
 import React from 'react';
-// import propTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 
 import CustomLink from '../../elements/CustomLink';
@@ -31,11 +30,7 @@ const useStyles = createUseStyles({
   },
 });
 
-// DesktopHeader.propTypes = {
-  
-// };
-
-function DesktopHeader(props) {
+function DesktopHeader() {
   const classes = useStyles();
   return (
     <nav className={classes.nav}>
