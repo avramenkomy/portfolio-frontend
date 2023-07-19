@@ -81,6 +81,17 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     flexWrap: 'nowrap',
     gap: '20px',
+    '& > a': {
+      textDecoration: 'none',
+      flexGrow: 1,
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    '& > a:visited': {
+      color: 'var(--contrast-text)',
+    },
     '& > button': {
       width: '50%',
       '& > a': {
@@ -115,16 +126,19 @@ function Home() {
         </p>
 
         <div className={classes.links}>
-          <button className="neumorphism_button">
+          {/* <button className="neumorphism_button">
             <Link to={'/about-me'}>About Me&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} color={'var(--primary)'}/></Link>
-          </button>
+          </button> */}
+
+          <Link to={'/about-me'} className="neumorphism_button">About Me&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} color={'var(--primary)'}/></Link>
+          <Link to={'/projects'} className="neumorphism_button">Projects&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} color={'var(--primary)'}/></Link>
           
           {/* <button className="neumorphism_button">
             <Link to={'/blog'}>Blog&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} /></Link>
           </button> */}
-          <button className="neumorphism_button">
+          {/* <button className="neumorphism_button">
             <Link to={'/projects'}>Projects&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight} color={'var(--primary)'}/></Link>
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
